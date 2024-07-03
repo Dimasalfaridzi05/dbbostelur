@@ -38,7 +38,7 @@ class Produksitelur extends Migration
                 'constraint' => 20,
             ],
         ]);
-
+      
         $this->forge->addKey('id_produksi', true);
         $this->forge->createTable('produksitelur');
     }
