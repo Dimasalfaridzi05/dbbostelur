@@ -4,22 +4,22 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class TernakModel extends Model
+class PenjualanModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'ternak';
-    protected $primaryKey       = 'id_ternak';
+    protected $table            = 'penjualan';
+    protected $primaryKey       = 'id_penjualan';
     protected $useAutoIncrement = true;
-    protected $returnType       = 'App\Entities\Ternak';
+    protected $returnType       = 'App\Entities\Penjualan';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'id_kandang', 
-        'id_user', 
-        'jenis_hewan', 
-        'jumlah_hewan', 
-        'keterangan',
-        'tanggal',
+        'id_user',
+        'tanggal_penjualan',
+        'jml_telur_terjual',
+        'harga_satuan',
+        'total_pendapatan',
+        'pembeli',
     ];
 
     // Dates
@@ -31,20 +31,26 @@ class TernakModel extends Model
 
     // Validation
     protected $validationRules      = [
-        'id_kandang'=>'required', 
-        'id_user'=>'required', 
-        'jenis_hewan'=>'required', 
-        'jumlah_hewan'=>'required',
-        'keterangan'=>'required', 
-        'tanggal'=>'required', 
+        'id_user' => 'required',
+        'tanggal_penjualan' => 'required',
+        'jml_telur_terjual' => 'required',
+        'harga_satuan' => 'required',
+        'total_pendapatan' => 'required',
+        'pembeli' => 'required',
     ];
     protected $validationMessages   = [
-        'id_kandang'=>'required', 
-        'id_user'=>'required', 
-        'jenis_hewan'=>'required', 
-        'jumlah_hewan'=>'required', 
-        'keterangan'=>'required', 
-        'tanggal'=>'required', 
+        'id_user' => [ 'required' => 'Masukkan id_user'
+        ],
+        'tanggal_penjualan' => [ 'required' => 'Masukkan tanggal_penjualan'
+        ],
+        'jml_telur_terjual' => [ 'required' => 'Masukkan jml_telur_terjual'
+        ],
+        'harga_satuan' => [ 'required' => 'Masukkan harga_satuan'
+        ],
+        'total_pendapatan' => [ 'required' => 'Masukkan total_pendapatan'
+        ],
+        'pembeli' => [ 'required' => 'Masukkan pembeli'
+        ],
     ];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;

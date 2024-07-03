@@ -13,17 +13,17 @@ class Produksitelur extends Migration
                 'type' => 'INT',
                 'auto_increment' => true,
             ],
-            'id_ternak' => [
+            'id_kandang' => [
                 'type' => 'INT',
-                'auto_increment' => true,
+                'null' => false,
             ],
             'id_user' => [
                 'type' => 'INT',
-                'auto_increment' => true,
+                'null' => false,
             ],
             'jumlah_telur' => [
                 'type' => 'INT',
-                'auto_increment' => true,
+                'null' => false,
             ],
             'kualitas_telur' => [
                 'type' => 'varchar',
@@ -38,8 +38,8 @@ class Produksitelur extends Migration
                 'constraint' => 20,
             ],
         ]);
-
-        $this->forge->addKey('id', true);
+      
+        $this->forge->addKey('id_produksi', true);
         $this->forge->createTable('produksitelur');
     }
 

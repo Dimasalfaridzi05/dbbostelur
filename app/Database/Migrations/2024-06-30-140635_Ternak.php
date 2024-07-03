@@ -15,11 +15,11 @@ class Ternak extends Migration
             ],
             'id_kandang' => [
                 'type' => 'INT',
-                'auto_increment' => true,
+                'null' => false,
             ],
             'id_user' => [
                 'type' => 'INT',
-                'auto_increment' => true,
+                'null' => false,
             ],
             'jenis_hewan' => [
                 'type' => 'varchar',
@@ -27,11 +27,19 @@ class Ternak extends Migration
             ],
             'jumlah_hewan' => [
                 'type' => 'INT',
-                'auto_increment' => true,
+                'null' => false,
+            ],
+            'keterangan' => [
+                'type' => 'varchar',
+                'constraint' => 15,
+            ],
+            'keterangan' => [
+                'type' => 'date',
+                'null' => false,
             ],
         ]);
 
-        $this->forge->addKey('id', true);
+        $this->forge->addKey('id_ternak', true);
         $this->forge->createTable('ternak');
     }
 

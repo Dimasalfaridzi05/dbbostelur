@@ -9,7 +9,7 @@ class Pengguna extends Migration
     public function up()
     {
         $this->forge->addField([
-            'id' => [
+            'id_user' => [
                 'type' => 'INT',
                 'auto_increment' => true,
             ],
@@ -36,11 +36,11 @@ class Pengguna extends Migration
         ]);
 
         $this->forge->addKey('id_user', true);
-        $this->forge->createTable('user');
+        $this->forge->createTable('pengguna');
     }
 
     public function down()
     {
-        $this->forge->dropTable('user');
+        $this->forge->dropTable('pengguna');
     }
 }

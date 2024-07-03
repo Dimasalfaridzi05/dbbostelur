@@ -8,13 +8,13 @@ class ProduksitelurModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'produksitelur';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'id_produksi';
     protected $useAutoIncrement = true;
     protected $returnType       = 'App\Entities\Produksitelur';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'id_ternak',
+        'id_kandang',
         'id_user',
         'jumlah_telur',
         'kualitas_telur',
@@ -31,7 +31,7 @@ class ProduksitelurModel extends Model
 
     // Validation
     protected $validationRules      = [
-        'id_ternak'=>'required',
+        'id_kandang'=>'required',
         'id_user'=>'required',
         'jumlah_telur'=>'required',
         'kualitas_telur'=>'required',
@@ -39,7 +39,7 @@ class ProduksitelurModel extends Model
         'waktu_pengambilan'=>'required',
     ];
     protected $validationMessages   = [
-        'id_ternak'=>'required',
+        'id_kandang'=>'required',
         'id_user'=>'required',
         'jumlah_telur'=>'required',
         'kualitas_telur'=>'required',

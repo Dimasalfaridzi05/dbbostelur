@@ -40,7 +40,7 @@ class Pengguna extends ResourceController
     public function update($id = null)
     {
         $data=$this->request->getRawInput();
-        $data['id_pengguna']=$id;
+        $data['id_user']=$id;
 
         if (!$this->model->find($id)) {
             return $this->fail("Data tidak ditemukan");

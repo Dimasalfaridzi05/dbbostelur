@@ -7,7 +7,7 @@ use CodeIgniter\RESTful\ResourceController;
 
 class ProduksiTelur extends ResourceController
 {
-    protected $modelName = 'App\Models\ProduksiTelurModel';
+    protected $modelName = 'App\Models\ProduksitelurModel';
     protected $format = 'json';
     public function index()
     {
@@ -25,7 +25,7 @@ class ProduksiTelur extends ResourceController
     public function create()
     {
         $data=$this->request->getPost();
-        $produksitelur=new \App\Entities\ProduksiTelur();
+        $produksitelur=new \App\Entities\Produksitelur();
         $produksitelur->fill($data);
 
         if (!$this->validate($this->model->validationRules,$this->model->validationMessages)) {
@@ -46,7 +46,7 @@ class ProduksiTelur extends ResourceController
             return $this->fail("Data tidak ditemukan");
         }
 
-        $produksitelur=new \App\Entities\ProduksiTelur();
+        $produksitelur=new \App\Entities\Produksitelur();
         $produksitelur->fill($data);
 
         if (!$this->validate($this->model->validationRules,$this->model->validationMessages)) {

@@ -44,12 +44,11 @@ class Penjualan extends Migration
         ]);
 
         $this->forge->addKey('id_penjualan', true);
-        $this->forge->addForeignKey('id_kandang', 'Kandang', 'id_kandang');
-        $this->forge->createTable('Penjualan');
+        $this->forge->createTable('penjualan');
     }
 
     public function down()
     {
-        $this->forge->dropTable('Penjualan');
+        $this->forge->dropTable('penjualan');
     }
 }
