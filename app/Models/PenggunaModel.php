@@ -29,8 +29,8 @@ class PenggunaModel extends Model
 
     // Validation
     protected $validationRules      = [
-        'username' => 'required|is_unique[pengguna.username]|regex_match[/^\S*$/]',
-        'email' => 'required|valid_email|is_unique[pengguna.email]',
+        'username' => 'required|regex_match[/^\S*$/]',
+        'email' => 'required|valid_email',
         'alamat' => 'required',
         'no_telepon' => 'required',
         'password' => 'required',
@@ -38,13 +38,11 @@ class PenggunaModel extends Model
     protected $validationMessages   = [
         'username' => [
             'required'=> 'Masukkan username',
-            'is_unique'=> 'nama sudah terdaftar, silahkan masukkan nama yang lain',
             'regex_match'=> 'nama tidak dapat dispasi',
         ],
         'email' => [
             'required'=> 'Masukkan email',
             'valid_email'=> 'silahkan masukkan email yang valid',
-            'is_unique'=> 'email sudah terdaftar, silahkan masukkan email yang lain',
         ],
         'alamat' => ['required'=> 'Masukkan alamat'
         ],

@@ -17,7 +17,7 @@ class PenjualanModel extends Model
         'id_user',
         'tanggal_penjualan',
         'jml_telur_terjual',
-        'harga_satuan',
+        'harga_perkilo',
         'total_pendapatan',
         'pembeli',
     ];
@@ -34,7 +34,7 @@ class PenjualanModel extends Model
         'id_user' => 'required',
         'tanggal_penjualan' => 'required',
         'jml_telur_terjual' => 'required',
-        'harga_satuan' => 'required',
+        'harga_perkilo' => 'required',
         'total_pendapatan' => 'required',
         'pembeli' => 'required',
     ];
@@ -45,7 +45,7 @@ class PenjualanModel extends Model
         ],
         'jml_telur_terjual' => [ 'required' => 'Masukkan jml_telur_terjual'
         ],
-        'harga_satuan' => [ 'required' => 'Masukkan harga_satuan'
+        'harga_perkilo' => [ 'required' => 'Masukkan harga_perkilo'
         ],
         'total_pendapatan' => [ 'required' => 'Masukkan total_pendapatan'
         ],
