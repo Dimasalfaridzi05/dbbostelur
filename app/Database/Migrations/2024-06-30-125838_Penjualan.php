@@ -29,7 +29,7 @@ class Penjualan extends Migration
                 'type' => 'INT',
                 'null' => false,
             ],
-            'harga_satuan' => [
+            'harga_perkilo' => [
                 'type' => 'INT',
                 'null' => false,
             ],
