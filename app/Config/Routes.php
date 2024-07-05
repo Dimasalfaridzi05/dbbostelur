@@ -11,5 +11,4 @@ $routes->resource('kandang');
 $routes->resource('karyawan');
 $routes->resource('penjualan');
 $routes->resource('produksitelur');
-$routes->resource('stok');
 $routes->resource('ternak');
