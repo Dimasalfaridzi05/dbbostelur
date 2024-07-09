@@ -33,6 +33,10 @@ class Ternak extends Migration
                 'type' => 'varchar',
                 'constraint' => 15,
             ],
+            'keterangan' => [
+                'type' => 'varchar',
+                'constraint' => 25,
+            ],
             'tanggal' => [
                 'type' => 'date',
                 'null' => false,
