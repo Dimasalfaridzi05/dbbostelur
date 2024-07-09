@@ -14,12 +14,13 @@ class PenjualanModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'id_user',
-        'tanggal_penjualan',
-        'jml_telur_terjual',
-        'harga_perkilo',
-        'total_pendapatan',
-        'pembeli',
+            'id_user' ,
+            'id_gudang' ,
+            'tanggal_penjualan' ,
+            'jml_telur_terjual' ,
+            'harga_perkilo' ,
+            'total_pendapatan' ,
+            'pembeli' ,
     ];
 
     // Dates
@@ -31,26 +32,22 @@ class PenjualanModel extends Model
 
     // Validation
     protected $validationRules      = [
-        'id_user' => 'required',
-        'tanggal_penjualan' => 'required',
-        'jml_telur_terjual' => 'required',
-        'harga_perkilo' => 'required',
-        'total_pendapatan' => 'required',
-        'pembeli' => 'required',
+            'id_user' => 'required',
+            'id_gudang' => 'required',
+            'tanggal_penjualan' => 'required',
+            'jml_telur_terjual' => 'required',
+            'harga_perkilo' => 'required',
+            'total_pendapatan' => 'required',
+            'pembeli' => 'required',
     ];
     protected $validationMessages   = [
-        'id_user' => [ 'required' => 'Masukkan id_user'
-        ],
-        'tanggal_penjualan' => [ 'required' => 'Masukkan tanggal_penjualan'
-        ],
-        'jml_telur_terjual' => [ 'required' => 'Masukkan jml_telur_terjual'
-        ],
-        'harga_perkilo' => [ 'required' => 'Masukkan harga_perkilo'
-        ],
-        'total_pendapatan' => [ 'required' => 'Masukkan total_pendapatan'
-        ],
-        'pembeli' => [ 'required' => 'Masukkan pembeli'
-        ],
+            'id_user' => ['required' => 'masukkan id_user'],
+            'id_gudang' => ['required' => 'masukkan id_gudang'],
+            'tanggal_penjualan' => ['required' => 'masukkan tanggal_penjualan'],
+            'jml_telur_terjual' => ['required' => 'masukkan jml_telur_terjual'],
+            'harga_perkilo' => ['required' => 'masukkan harga_perkilo'],
+            'total_pendapatan' => ['required' => 'masukkan total_pendapatan'],
+            'pembeli' => ['required' => 'masukkan pembeli'],
     ];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;

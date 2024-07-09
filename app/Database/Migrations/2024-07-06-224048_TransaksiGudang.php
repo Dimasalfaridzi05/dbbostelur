@@ -4,12 +4,12 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Produksitelur extends Migration
+class TransaksiGudang extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'id_produksi' => [
+            'id_transaksi' => [
                 'type' => 'INT',
                 'auto_increment' => true,
             ],
@@ -21,30 +21,26 @@ class Produksitelur extends Migration
                 'type' => 'INT',
                 'null' => false,
             ],
-            'jumlah_telur' => [
+            'id_gudang' => [
                 'type' => 'INT',
                 'null' => false,
             ],
-            'kualitas_telur' => [
-                'type' => 'varchar',
-                'constraint' => 20,
-            ],
-            'tanggal_produksi' => [
+            'tanggal' => [
                 'type' => 'date',
                 'null' => false,
             ],
-            'waktu_pengambilan' => [
-                'type' => 'varchar',
-                'constraint' => 20,
+            'jml_telur' => [
+                'type' => 'INT',
+                'null' => false,
             ],
         ]);
-      
-        $this->forge->addKey('id_produksi', true);
-        $this->forge->createTable('produksitelur');
+
+        $this->forge->addKey('id_transaksi', true);
+        $this->forge->createTable('transaksigudang');
     }
 
     public function down()
     {
-        $this->forge->dropTable('produksitelur');
+        $this->forge->dropTable('transaksigudang');
     }
 }
